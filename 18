@@ -1,0 +1,23 @@
+ /*  18. Leia um valor de volume em metros cúbicos m3 e apresente-o convertido em litros. A
+ fórmula de convers˜ão é: L = 1000 * M, sendo L o volume em litros e M o volume em
+ metros cúbicos.  */
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float M3, L;
+
+    printf("Digite o valor do volume em metros cubicos: \n");
+    scanf("%f", &M3);
+    L = 1000 * M3;
+
+    printf("O valor convertido em litros vale: %.2f \n", L);
+
+    system("pause");
+    return 0;
+}
