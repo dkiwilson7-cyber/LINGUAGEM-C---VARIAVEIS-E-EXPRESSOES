@@ -1,0 +1,61 @@
+/*
+52. Três amigos jogaram na loteria. Caso eles ganhem, o prêmio deve ser repartido
+proporcionalmente ao valor que cada um deu para a realização da aposta.
+
+Faça um programa que leia quanto cada apostador investiu, o valor do prêmio,
+e imprima quanto cada um ganharia do prêmio com base no valor investido.
+*/
+
+#include <stdio.h>   // Biblioteca padrão de entrada e saída
+#include <stdlib.h>  // Biblioteca padrão (para usar system("pause"))
+
+int main()
+{
+    // Declaração das variáveis de entrada
+    float inv1, inv2, inv3;     // Valores investidos pelos três apostadores
+    float total;                // Soma total dos investimentos
+    float premio;               // Valor total do prêmio da loteria
+
+    // Declaração das variáveis de saída
+    float ganho1, ganho2, ganho3;  // Ganho proporcional de cada apostador
+
+    // Solicita o valor investido pelo apostador 1
+    printf("Digite o valor investido pelo apostador 1: \n");
+    scanf("%f", &inv1);  // Lê e armazena o valor na variável inv1
+
+    // Solicita o valor investido pelo apostador 2
+    printf("Digite o valor investido pelo apostador 2: \n");
+    scanf("%f", &inv2);  // Lê e armazena o valor na variável inv2
+
+    // Solicita o valor investido pelo apostador 3
+    printf("Digite o valor investido pelo apostador 3: \n");
+    scanf("%f", &inv3);  // Lê e armazena o valor na variável inv3
+
+    // Solicita o valor total do prêmio da loteria
+    printf("Digite o valor do premio: \n");
+    scanf("%f", &premio);  // Lê o valor do prêmio
+
+    // Calcula o total investido pelos três apostadores
+    total = inv1 + inv2 + inv3;
+
+    // -------------------------------------------
+    // Cálculo proporcional do prêmio
+    // Cada apostador recebe o prêmio multiplicado
+    // pela fração correspondente à sua participação no investimento total
+    // Exemplo: se o apostador 1 deu 50% do total, ele ganha 50% do prêmio
+    // -------------------------------------------
+
+    ganho1 = premio * (inv1 / total);  // Prêmio do apostador 1
+    ganho2 = premio * (inv2 / total);  // Prêmio do apostador 2
+    ganho3 = premio * (inv3 / total);  // Prêmio do apostador 3
+
+    // Exibe o valor que cada um ganhou, com duas casas decimais
+    printf("\n--- Resultado da Divisao do Premio ---\n");
+    printf("Apostador 1 recebera: R$ %.2f\n", ganho1);
+    printf("Apostador 2 recebera: R$ %.2f\n", ganho2);
+    printf("Apostador 3 recebera: R$ %.2f\n", ganho3);
+
+    // Pausa o programa (útil no Windows)
+    system("pause");
+    return 0;  // Indica que o programa terminou corretamente
+}
