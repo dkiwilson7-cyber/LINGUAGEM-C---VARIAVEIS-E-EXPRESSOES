@@ -1,0 +1,23 @@
+/*  8. Leia uma temperatura em graus Kelvin e apresente-a convertida em graus Celsius. A
+ fórmula de convers˜ão é: C = K - 273.15, sendo C a temperatura em Celsius e K a
+ temperatura em Kelvin.  */
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float K, C;
+
+    printf("Digite uma temperatura em graus Kelvin: \n");
+    scanf("%f", &K);
+    C = K - 273.15;
+
+    printf("A temperatura em graus Celsius vale: %.2f \n", C);
+
+    system("pause");
+    return 0;
+}
