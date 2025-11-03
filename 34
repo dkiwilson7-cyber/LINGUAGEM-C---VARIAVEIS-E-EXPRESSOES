@@ -1,0 +1,21 @@
+/*  34. Leia o valor do raio de um círculo e calcule e imprima a área do círculo correspondente.
+ A área do círculo é pi* raio*raio, considere pi = 3.141592.  */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.141592
+
+int main()
+{
+    float R, A;
+
+    printf("Digite o valor do raio de um circulo: \n");
+    scanf("%f", &R);
+    A = pi*R*R;
+
+    printf("O valor da area do circulo vale: %.2f \n", A);
+
+    system("pause");
+    return 0;
+}
