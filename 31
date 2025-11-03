@@ -1,0 +1,20 @@
+/*  31. Leia um número inteiro e imprima o seu antecessor e o seu sucessor.  */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int NUM, antecessor, sucessor;
+
+    printf("Digite um numero inteiro: \n");
+    scanf("%d", &NUM);
+    antecessor = NUM - 1;
+    sucessor = NUM + 1;
+
+    printf("O numero antecessor do digitado eh: %d \n", antecessor);
+    printf("O numero sucessor do digitado eh: %d \n", sucessor);
+
+    system("pause");
+    return 0;
+}
