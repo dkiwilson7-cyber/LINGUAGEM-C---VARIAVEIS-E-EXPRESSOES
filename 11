@@ -1,0 +1,23 @@
+/*   11. Leia uma velocidade em m/s (metros por segundo) e apresente-a convertida em km/h
+ (quilômetros por hora). A fórmula de convers˜ão é: K = M * 3.6, sendo K a velocidade
+ em km/h e M em m/s.  */
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float M , K;
+
+    printf("Digite uma velocidade em metros por segundo: \n");
+    scanf("%f", &M);
+    K = M * 3.6;
+
+    printf("A velocidade convertida para quilometros por hora vale: %.2f \n", K);
+
+    system("pause");
+    return 0;
+}
