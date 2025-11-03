@@ -1,0 +1,49 @@
+/*
+49. Faça um programa que leia o horário (hora, minuto e segundo) de início e a duração, em
+segundos, de uma experiência biológica. O programa deve resultar com o novo horário
+(hora, minuto e segundo) do término da mesma.
+*/
+
+#include <stdio.h>   // Biblioteca padrão de entrada e saída
+#include <stdlib.h>  // Biblioteca padrão (para usar system("pause"))
+
+int main()
+{
+    int hora_inicio, min_inicio, seg_inicio;   // Variáveis para o horário inicial
+    int duracao;                               // Duração da experiência em segundos
+    int hora_final, min_final, seg_final;      // Variáveis para o horário final
+    int total_segundos;                        // Variável auxiliar para soma total de segundos
+
+    // Solicita o horário inicial da experiência
+    printf("Digite a hora inicial (0 a 23): ");
+    scanf("%d", &hora_inicio);
+
+    printf("Digite o minuto inicial (0 a 59): ");
+    scanf("%d", &min_inicio);
+
+    printf("Digite o segundo inicial (0 a 59): ");
+    scanf("%d", &seg_inicio);
+
+    // Solicita a duração da experiência em segundos
+    printf("Digite a duracao da experiencia em segundos: ");
+    scanf("%d", &duracao);
+
+    // Converte o horário inicial totalmente em segundos
+    // Exemplo: 1h = 3600 seg, 1 min = 60 seg
+    total_segundos = hora_inicio * 3600 + min_inicio * 60 + seg_inicio;
+
+    // Soma a duração total da experiência
+    total_segundos = total_segundos + duracao;
+
+    // Agora convertemos novamente o total de segundos em horas, minutos e segundos
+    hora_final = (total_segundos / 3600) % 24;   // Divide por 3600 para obter horas e usa %24 para manter dentro do dia
+    min_final = (total_segundos % 3600) / 60;    // O resto da divisão por 3600 dá segundos restantes, divide por 60 para minutos
+    seg_final = total_segundos % 60;             // O resto final são os segundos restantes
+
+    // Exibe o novo horário do término
+    printf("\nHorario final da experiencia:\n");
+    printf("%02d:%02d:%02d\n", hora_final, min_final, seg_final);  // Exibe no formato HH:MM:SS com dois dígitos
+
+    system("pause");  // Pausa a tela (em sistemas Windows)
+    return 0;         // Indica que o programa terminou corretamente
+}
