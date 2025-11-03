@@ -1,0 +1,50 @@
+ /*  46. Faça um programa que leia um número inteiro positivo de tês dígitos (de 100 a 999).
+ Gere outro número formado pelos dígitos invertidos do número lido. Exemplo:  */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num, invertido;
+
+    printf("Digite um numero inteiro positivo de tres digitos (de 100 a 999): \n");
+    scanf("%d", &num);
+
+    printf("O numero lido foi: %d \n", num);
+
+    printf("O numero invertido eh: %d%d%d \n", (num / 1) % 10, (num / 10) % 10, (num / 100) % 100); //algoritmo para 3 dígitos (unidade, dezena, centena)
+
+    system("pause");
+    return 0;
+}
+
+/* algoritmo para 4 dígitos ou mais
+
+printf("%d%d%d%d", num % 10, (num / 10) % 10, (num / 100) % 10, num / 1000); // (unidade, dezena, centena)
+
+*/
+
+
+/*  usando while (mais fácil e direto)
+
+
+                  #include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+
+    while (num > 0) {
+        printf("%d", num % 10);  // imprime o último dígito
+        num /= 10;               // remove o último dígito
+    }
+
+    return 0;
+}
+
+*/
