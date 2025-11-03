@@ -1,0 +1,20 @@
+/*  13. Leia uma distância em quilômetros e apresente-a convertida em milhas. A fórmula de
+ convers˜ãoo é: M = K / 1.61, sendo K a distância em quilômetros e M em milhas.  */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float K, M;
+
+    printf("Digite a distancia em quilometros: \n");
+    scanf("%f", &K);
+    M = K / 1.61;
+
+    printf("A distancia convertida em milhas vale: %.2f \n", M);
+
+    system("pause");
+    return 0;
+}
