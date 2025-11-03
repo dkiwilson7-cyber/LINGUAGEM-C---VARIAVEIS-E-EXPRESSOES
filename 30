@@ -1,0 +1,19 @@
+/*  30. Leia um valor em real e a cotação do dólar. Em seguida, imprima o valor correspondente
+ em dólares.  */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float real, dolar, cotacao;
+
+    printf("Digite o valor em Reais e a Cotacao em dolares: \n");
+    scanf("%f %f", &real, &cotacao);
+    dolar = cotacao * real;
+
+    printf("O valor em dolares vale: %.2f \n", dolar);
+
+    system("pause");
+    return 0;
+}
